@@ -136,8 +136,6 @@ main{
 }
 
 .slider__image:hover{
-    transform: translateY(-2px);
-    -webkit-transform: translate(-2px);
     box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
     opacity: 0.5;
 }
