@@ -8,10 +8,93 @@
 
     <!-- CSS LINK -->
     <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    
 
+    <!-- GOOGLE FONTS LINK -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?  family=Kumbh+Sans:wght@300&display=swap"  rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+            <navbar class="nav">
+                <!-- LEFT HEADER LINKS -->
+                <div class="left__header__navbar">
+                    <div class="logo">
+                        <a href="#">
+                            <img src="./img/logo.svg"   alt="e-commerce logo">
+                        </a>
+                    </div>
+                        <ul>
+                            <li>Collections</li>
+                            <li>Men</li>
+                            <li>Women</li>
+                            <li>About</li>
+                            <li>Contact</li>
+                        </ul>
+                </div>
+                <!-- RIGHT HEADER LINKS -->
+                <div class="right__header__navbar">
+                    <ul>
+                        <li><a href="#"><img src="./img/icon-cart.svg" alt="icon cart"  class="icon__cart"></a></li>
+                        <li><a href="#"><img src="./img/image-avatar.png" alt="profile img" class="avatar__img"></a></li>
+                    </ul>
+                </div>
+            </navbar>
+
+    <main>
+    <!-- IMAGE SNEAKERS SLIDER -->
+        <div class="row__slider">
+            <div class="slider">
+                <div class="current__img__slider">
+                    <img src="./img/image-product-1.jpg" alt="first image" class="main__img" id="img1">
+                    <img src="./img/image-product-2.jpg" alt="first image" class="main__img display__none" id="img2">
+                    <img src="./img/image-product-3.jpg" alt="first image" class="main__img display__none" id="img3">
+                    <img src="./img/image-product-4.jpg" alt="first image" class="main__img display__none" id="img4">
+                </div>
+                <!-- SMALL IMAGE SLIDER -->
+                <div class="slider__sneaker__images">
+                    <div class="slider__image first__image">
+                        <img src="./img/image-product-1-thumbnail.jpg" alt="first small image" id="small__img__1">
+                    </div>
+                    <div class="slider__image">
+                        <img src="./img/image-product-2-thumbnail.jpg" alt="second small image" id="small__img__2">
+                    </div>
+                    <div class="slider__image">
+                        <img src="./img/image-product-3-thumbnail.jpg" alt="third small image" id="small__img__3">
+                    </div>
+                    <div class="slider__image">
+                        <img src="./img/image-product-4-thumbnail.jpg" alt="fourth small image" id="small__img__4">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SNEAKER TEXT DESCRIPTION -->
+        <div class="sneaker__description">
+            <span class="span">Sneaker Company</span>
+            <h1>Fall Limited Edition <br>Sneakers</h1>
+            <p>These low-profile sneakers are your perfect casual wear <br>companion. Featuring a durable rubber outer sole, they'll withdraw everything the weather can offer.</p>
+            <div class="sneaker__prices">
+                <span class="sneaker__current__price">$125.00</span>
+                <span class="sneaker__discount">50%</span>
+                <span class="sneaker__original__price">$250.00</span>
+            </div>
+
+            <div class="sneaker__quantity__button">
+                <div class="quantity">
+                    <!-- - icon -->
+                    <img src="./img/icon-minus.svg" alt="remove quantity" id="minus-sign">
+                    <!-- input -->
+                    <input type="number" title="quantity" name="quantity" value="0" id="num">
+                    <!-- + icon -->
+                    <img src="./img/icon-plus.svg" alt="add quantity" id="plus-sign">
+                    <!-- add to cart btn -->
+                    <button class="btn" title="btn"><img src="./img/icon-cart.svg" alt="">Add to cart</button>
+                </div>
+            </div>
+        </div>
+    </main>
 
     <!-- JS LINK -->
     <script src="./main.js"></script>

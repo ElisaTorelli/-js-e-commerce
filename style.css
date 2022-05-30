@@ -1,0 +1,245 @@
+/*
+    1)VARIABLES
+    2)GENERAL
+    3)HEADER
+        a.navGeneral
+        b.leftLinks
+        c.rightLinks
+    4)SLIDER
+        a.rowSlider
+        b.mainPhoto
+        c.generalSlider
+        d.sliderImages
+    5)SNEAKER TEXT DESCRIPTION
+    6)PRICES
+        a.originalPrice
+        b.disocuntPriceTag
+        c.currentPrice
+    7)BUTTONS
+        a.addRemoveButtons
+*/
+
+/* VARIABLES */
+html{
+    --lightgray: #b6bcc8;
+    --sand: #f7f8fd;
+    --white: #fff;
+    --white-cream: #ffede0;
+    --gray: #68707d;
+    --darkgray: #1d2025;
+    --black: #000;
+    --orange: #ff7d19;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+
+/* GENERAL */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 80%;
+    margin: 48px auto;
+}
+
+
+/* HEADER */
+/* navGeneral */
+.nav{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 20px;
+}
+
+/* leftLinks */
+.left__header__navbar{
+    display: flex;
+}
+
+.left__header__navbar ul{
+    display: flex;
+    list-style: none;
+    padding-left: 48px;
+}
+
+.left__header__navbar ul li{
+    margin-right: 32px;
+    color: var(--gray);
+    line-height: 25px;
+}
+
+/* rightLinks */
+.right__header__navbar ul{
+    display: flex;
+    list-style-type: none;
+}
+
+.avatar__img{
+    width: 48px;
+}
+
+.icon__cart{
+    line-height: 50px;
+    padding-right: 48px;
+    padding-top: 10px;
+}
+
+main{
+    display: flex;
+    margin-top: 70px;
+}
+
+.display__none{
+    display: none;
+}
+
+/* SLIDER */
+.slider{
+    display: flex;
+    flex-basis: 50%;
+    padding: 0 60px;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* rowSlider */
+.slider__sneaker__images{
+    margin-top: 24px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 24px;
+}
+
+/* mainPhoto */
+.current__img__slider{
+    cursor: pointer;
+    max-width: 900px;
+}
+
+.current__img__slider img{
+    object-fit: cover;
+    border-radius: 12px;
+    width: 100%;
+}
+
+/* generalSlider */
+.slider__image{
+    cursor: pointer;
+    overflow: hidden;
+    max-width: 90px;
+    transition: all 0.2 ease-in-out;
+    border-radius: 10px;
+}
+
+.slider__image:hover{
+    transform: translateY(-2px);
+    -webkit-transform: translate(-2px);
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+    opacity: 0.5;
+}
+
+.first__image{
+    border: 2px solid
+    var(--orange);
+    opacity: 0.50;
+}
+
+/* sliderImages */
+.slider__image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* SNEAKER TEXT DESCRIPTION */
+.sneaker__description{
+    padding-top: 56px;
+    align-items: flex-start;
+    padding-left: 32px;
+}
+
+.span{
+    color: var(--orange);
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+h1{
+    padding-top: 16px;
+    padding-bottom: 32px;
+}
+
+p{
+    color: var(--gray);
+    font-size: 15px;
+    letter-spacing: 0.7px;
+    line-height: 1.2;
+    padding-bottom: 16px;
+    padding-bottom: 56px;
+}
+
+
+/* PRICES */
+/* originalPrice */
+.sneaker__original__price{
+    display: block;
+    flex-basis: 100%;
+    padding-top: 8px;
+    padding-bottom: 48px;
+    color: var(--gray);
+    text-decoration: line-through;
+}
+
+/* disocuntPriceTag */
+.sneaker__discount{
+    color: var(--orange);
+    background-color: #ff7d193f;
+    font-weight: 600;
+    margin-left: 24px;
+}
+
+/* currentPrice */
+.sneaker__current__price{
+    font-weight: 700;
+    font-size: 24px;
+}
+
+
+/* BUTTONS */
+/* addRemoveButtons */
+.btn{
+    margin-left: 32px;
+    background-color: var(--orange);
+    color: var(--white);
+    border: none;
+    line-height: 24px;
+    font-size: 12px;
+    font-weight: 700;
+    width: 200px;
+    height: 40px;
+    border-radius: 12px;
+}
+
+.btn img{
+    vertical-align: middle;
+    line-height: 24px;
+    padding-right: 16px;
+}
+
+
+input{
+    width: 28px;
+    border: none;
+    font-weight: 800;
+}
+
+.quantity img{
+    vertical-align: middle;
+    padding-right: 20px;
+}
