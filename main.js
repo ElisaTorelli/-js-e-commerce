@@ -13,35 +13,25 @@ add.addEventListener("click", ()=>{
     number.value ++
 })
 
-// DECLARE VARIABLES
-let img1 = document.getElementById("img1");
-let img2 = document.getElementById("img2");
-let img3 = document.getElementById("img3");
-let img4 = document.getElementById("img4");
 
-let smallImage1 = document.getElementById("small__img__1");
-let smallImage2 = document.getElementById("small__img__2");
-let smallImage3 = document.getElementById("small__img__3");
-let smallImage4 = document.getElementById("small__img__4");
+//ARRAY THAT CONTAINS SMALL IMG
+const imagesArray = ["./img/image-product-1-thumbnail.jpg", "./img/image-product-2-thumbnail.jpg", "./img/image-product-3-thumbnail.jpg", "./img/image-product-4-thumbnail.jpg"];
+
+let imageContainer = document.querySelector(".slider__sneaker__images");
+
+let bigImage = document.querySelector(".posterImage");
 
 
-// ACTION WHEN CLICKING ON SMALL IMAGE
-smallImage1.addEventListener("click", ()=>{
-    document.querySelector(".main__img:not(.display__none)").classList.add("display__none");
-    img1.classList.remove("display__none");
-});
+for (i=0; i<imagesArray; i++){
+    let image = document.createElement("img");
+    image.src = imagesArray[i];
+    imageContainer.append(img);
+    image.classList.add("img-thumbnail");
+}
 
-smallImage2.addEventListener("click", ()=>{
-    document.querySelector(".main__img:not(.display__none)").classList.add("display__none");
-    img2.classList.remove("display__none");
-});
-
-smallImage3.addEventListener("click", ()=>{
-    document.querySelector(".main__img:not(.display__none)").classList.add("display__none");
-    img3.classList.remove("display__none");
-});
-
-smallImage4.addEventListener("click", ()=>{
-    document.querySelector(".main__img:not(.display__none)").classList.add("display__none");
-    img4.classList.remove("display__none");
+const image = document.querySelector(".img-thumbnail");
+image.forEach((e) => {
+    e.addEventListener("click", () => {
+        bigImage.src = e.replace("-thumbnail", "");
+    })
 });
